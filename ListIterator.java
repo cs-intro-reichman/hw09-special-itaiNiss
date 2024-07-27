@@ -19,8 +19,17 @@ public class ListIterator {
      *  and advances the cursor to the next element.
      *  Should be called only if hasNext() is true. */
     public CharData next() {
-        CharData cd = current.cd;
+        CharData cd = current.cp;
         current = current.next;
         return cd;
     }
+
+    // public CharData next() {
+    //     if (!hasNext()) {
+    //         throw new java.util.NoSuchElementException();
+    //     }
+    //     CharData data = current.cp;
+    //     current = current.next;
+    //     return data;
+    // }
 }
